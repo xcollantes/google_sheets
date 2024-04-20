@@ -4,18 +4,15 @@ Target Google Sheets MUST GIVE EDITOR ACCESS to service account email where the
 Service Account API came from.
 """
 
-from dataclasses import dataclass
 import logging
 import os
 
 from dotenv import load_dotenv
-from google.oauth2.credentials import Credentials
 from google.oauth2.service_account import Credentials
-from googleapiclient.discovery import build, Resource
+from googleapiclient.discovery import Resource, build
 
 load_dotenv()
 
-# If modifying these scopes, delete the file token.json.
 # This is read and write access.
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
